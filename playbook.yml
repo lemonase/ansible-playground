@@ -1,0 +1,14 @@
+- name: "My first playbook"
+  hosts: all
+  become_user: root
+  tasks:
+    - name: "Ping all DO hosts"
+      ansible.builtin.ping:
+    - name: "Print message"
+      ansible.builtin.debug:
+        msg: Hello World
+    - name: "Upgrade packages"
+      become: true
+      ansible.builtin.apt:
+        update_cache: true
+        upgrade: "yes"

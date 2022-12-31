@@ -1,0 +1,6 @@
+[digitalocean_hosts]
+deblet
+devlet
+
+[local_network]
+ubuvm
